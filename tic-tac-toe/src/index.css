@@ -12,20 +12,28 @@ code {
     monospace;
 }
 
-.form{
-  text-align:center;
+.form {
+  text-align: center;
 }
 
-.square{
-  aspect-ratio:1;
-  width:100%;
+.square {
+  aspect-ratio: 1;
+  width: 100%;
 }
 
-.grid-layout{
-  display:grid;
-  grid-template-columns: repeat(3,1fr);
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2vw;
-  max-width:300px;
-  place-items:center;
-  margin:auto;
+  max-width: 300px;
+  place-items: center;
+  margin: auto;
+}
+
+#reset {
+  margin: 20px;
+  width: 30%;
+  min-width: 150px;
+  max-width: 250px;
+  height: 35px;
 }
