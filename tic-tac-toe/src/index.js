@@ -5,14 +5,14 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 const { useState } = React  //Destructures useState hook from React
+const winningSets = ["012", "345",
+    "678", "036", "147", "258", "048", "246"];        // sets winning indeces for squares to determine winner
 
 function TicTacToe() {      //Main Component
   const [squares, setSquares] = useState(Array(9).fill(""))     //state that tracks the button squares
   const [winner, setWinner] = useState(false);                  // tracks if there is a winner
   const [active, setActive] = useState("X");                    // tracks which player is currently playing
   const [message, setMessage] = useState(`Next Player: ${active}`);   // tracks message 
-  const winningSets = ["012", "345",
-    "678", "036", "147", "258", "048", "246"];        // sets winning indeces for squares to determine winner
 
   const testWinner = (newSquares) => {                // This function checks if the winning sets include all of the same player
     for (let sets of winningSets) {

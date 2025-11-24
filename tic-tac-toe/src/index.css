@@ -1,3 +1,11 @@
+:root{
+  --text-color: #e0e0e0;
+  --form-color: #0f3460;
+  --heading-color: #e94560;
+  --message-color: #00d9ff;
+  --square-fill-color: #1a1a2e;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +13,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  min-height:100vh;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  color: var(--text-color);
 }
 
 code {
@@ -14,26 +28,67 @@ code {
 
 .form {
   text-align: center;
+  background: var(--form-color);
+  padding:2rem;
+  border-radius:20px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.4);
+}
+
+.form h1{
+color: var(--heading-color);
+font-size: 2.5rem;
+margin: 0 0 1rem 0;
+text-shadow:2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.form p{
+  font-size:1.3rem;
+  color: var(--message-color);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
 }
 
 .square {
+  background: var(--square-fill-color);
+  border: 3px solid var(--heading-color);
+  border-radius:10px;
+  font-size: 2.5rem;
+  font-weight:bold;
+  color: var(--message-color);
+  cursor: pointer;
   aspect-ratio: 1;
   width: 100%;
 }
 
 .grid-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2vw;
-  max-width:  300px;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  width: fit-content;
   place-items:  center;
-  margin:  auto;
+  margin:  0 auto 2rem;
 }
 
 #reset {
-  margin: 20px;
-  width: 30%;
-  min-width: 150px;
-  max-width: 250px;
-  height: 35px;
+  background: var(--heading-color);
+  color:white;
+  border:none;
+  padding:12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+}
+
+#reset:hover{
+  background: #d63651;
+  transform: translateY(-2px);
+  box-shadow:0 6px 20px rgba(233,69,96,0.5);
+}
+
+#reset:active {
+  transform: translateY(0);
 }
